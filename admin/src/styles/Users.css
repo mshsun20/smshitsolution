@@ -1,0 +1,21 @@
+
+.tbldta {
+    overflow-x: auto;
+}
+.tbl {
+    font-size: 1rem;
+}
+.tbl, th, td {
+    border: 0.1rem solid black;
+    border-collapse: collapse;
+}
+thead tr {
+    background-color: darkslategray;
+    color:mintcream;
+}
+th, td {
+    padding: 0 0.5rem;
+}
+th {
+    font-weight: 500;
+}

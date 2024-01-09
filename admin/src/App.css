@@ -1,0 +1,57 @@
+
+/* .topbar {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background-color: var(--theme-dark);
+  width: 100vw;
+  height: 5vh;
+  padding: 0 5%;
+  color: var(--theme);
+  font-size: 1rem;
+  font-weight: 500;
+  border: 0.5rem solid var(--theme-dark);
+  z-index: 5;
+}
+.stat {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  height: 100%;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 1rem;
+} */
+.offln {
+  /* position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+  background-color: red;
+  /* height: 100%;
+  padding: 0 0.5rem; */
+  color: cornsilk;
+  /* text-align: center;
+  text-wrap: nowrap;
+  border: none;
+  border-radius: 1rem; */
+}
+.onln {
+  /* position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+  background-color: green;
+  /* height: 100%;
+  padding: 0 0.5rem; */
+  color: paleturquoise;
+  /* text-align: center;
+  text-wrap: nowrap;
+  border: none;
+  border-radius: 1rem; */
+}
