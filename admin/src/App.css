@@ -1,0 +1,114 @@
+
+.topbar {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background-color: var(--theme-dark);
+  width: 100vw;
+  height: 4vh;
+  padding: 0 2%;
+  color: var(--theme);
+  font-size: 0.7rem;
+  font-weight: 500;
+  z-index: 5;
+}
+.stat {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  height: 100%;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 1rem;
+}
+.offln {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  height: 100%;
+  padding: 0 0.5rem;
+  color: cornsilk;
+  text-align: center;
+  text-wrap: nowrap;
+  border: none;
+  border-radius: 1rem;
+}
+.onln {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  height: 100%;
+  padding: 0 0.5rem;
+  color:palegreen;
+  text-align: center;
+  text-wrap: nowrap;
+  border: none;
+  border-radius: 1rem;
+}
+
+.wbpg {
+  position: relative;
+  background-color: var(--white);
+  top: 4vh;
+  width: 100vw;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 5rem;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icn {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+}
+.navmenu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+.nv {
+  background-image: radial-gradient(#6da1ad 10%, #3f585e 100%);
+  padding: 0.2rem 0.8rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 20%;
+}
+.nv {
+  color: #eadaf7;
+}
+
+.actv {
+  background-image: radial-gradient(#ad6da4 10%, #5e3f5e 100%);
+}
+
+.main {
+  width: 100%;
+  min-height: 82vh;
+}
+
+.footer {
+  width: 100%;
+}

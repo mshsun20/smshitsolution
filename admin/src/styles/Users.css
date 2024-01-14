@@ -1,0 +1,70 @@
+
+.cnf {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background-color: #1d2e36;
+    width: 40vw;
+    height: 30vh;
+    color: #d6eaf3;
+    border-radius: 0.5rem;
+    transform: translate(-50%, -10%);
+}
+.cnf span {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 1.6rem;
+}
+.cnf .btngrp {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.cnf .btngrp button {
+    width: 3.5rem;
+    padding: 0.5rem;
+}
+#okbtn {
+    background-color:#663399;
+    border: none;
+    border-radius: 0.2rem;
+    color: #ebdff8;
+    font-weight: bold;
+}
+#cnclbtn {
+    background-color: #778899;
+    border: none;
+    border-radius: 0.2rem;
+    color: #040b12;
+    font-weight: 600;
+}
+
+.tbldta {
+    overflow-x: auto;
+}
+.tbl {
+    font-size: 1rem;
+}
+.tbl, th, td {
+    border: 0.1rem solid black;
+    border-collapse: collapse;
+}
+thead tr {
+    background-color: darkslategray;
+    color:mintcream;
+}
+th, td {
+    padding: 0 0.5rem;
+}
+th {
+    font-weight: 500;
+}
