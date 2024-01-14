@@ -20,7 +20,7 @@ const App = () => {
       <Topbar />
       <Routes>
         <Route path='/' element={<Login />} />
-        <Route path='/account' element={<Account />} />
+        <Route path='/a4c57_cY61p_ou9x2v5Wqd_3RD11Y7nt0_WH4VJ_8HI0D' element={<Account />} />
         <Route path='/home' element={<Home />} />
         <Route path='/user' element={<Users />} />
         <Route path='/addusr' element={<Addusr />} />
