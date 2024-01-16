@@ -26,19 +26,22 @@ const Navbar = (props) => {
     <>
       <div className="navmenu">
         <div className="menulist">
-          <NavLink to='/home' className='nv'>Home</NavLink>
+          <div className="menu">
+            <NavLink to='/home' className='nv'>Home</NavLink>
+          </div>
+          {/* <div className="menu">
+            <NavLink to='/login' className='nv'>Login</NavLink>
+          </div> */}
+          <div className="menu">
+            <NavLink to='/user' className='nv'>Users</NavLink>
+          </div>
+          <div className="menu">
+            <NavLink to='/service' className='nv'>Services</NavLink>
+          </div>
         </div>
-        {/* <div className="menulist">
-          <NavLink to='/login' className='nv'>Login</NavLink>
-        </div> */}
-        <div className="menulist">
-          <NavLink to='/user' className='nv'>Users</NavLink>
-        </div>
-        <div className="menulist">
-          <NavLink to='/service' className='nv'>Services</NavLink>
-        </div>
-        <div className="menulist">
-          <NavLink className='lg'>
+        <div className="hmbg">=</div>
+        <div className="prfl">
+          <button className='lg'>
             {
               (acdtl) ? (
                 <>
@@ -46,7 +49,7 @@ const Navbar = (props) => {
                 </>
               ) : null
             }
-          </NavLink>
+          </button>
         </div>
       </div>
     </>
