@@ -4,24 +4,30 @@ const bcrypt = require('bcrypt')
 let saltRound = 8
 
 module.exports = {
-    register: (req, res) => {
+    register: async (req, res) => {
         // console.log(req.body)
         const {usrunam, usrphn, usreml, usrpass, usrfnam, usraddr, usrpin} = req.body
         // console.log(usrpass)
 
         try {
-            bcrypt.genSalt(saltRound, (err, salt) => {
-                bcrypt.hash(usrpass, salt, async (err, hashpass) => {
-                    // console.log(hashpass)
-                    const Usr = await UsrModel.create({usrunam, usrphn, usreml, usrpass:hashpass, usrfnam, usraddr, usrpin})
-                    if (Usr) {
-                        res.json({success:`User Registered Successfully.`, statuscode:220})
-                    }
-                    else {
-                        res.json({error:`User Registration Failed...!`, statuscode:422})
-                    }
+            const UsrExst = await UsrModel.findOne({usrunam})
+            if (UsrExst) {
+                res.json({error:"Username already exists...!", statuscode:401})
+            }
+            else {
+                bcrypt.genSalt(saltRound, (err, salt) => {
+                    bcrypt.hash(usrpass, salt, async (err, hashpass) => {
+                        // console.log(hashpass)
+                        const Usr = await UsrModel.create({usrunam, usrphn, usreml, usrpass:hashpass, usrfnam, usraddr, usrpin})
+                        if (Usr) {
+                            res.json({success:`User Registered Successfully.`, statuscode:220})
+                        }
+                        else {
+                            res.json({error:`User Registration Failed...!`, statuscode:422})
+                        }
+                    })
                 })
-            })
+            }
         } catch (error) {
             console.error(error)
         }
@@ -33,7 +39,7 @@ module.exports = {
         try {
             const Usr = await UsrModel.findOne({usrunam})
             if (!Usr) {
-                res.json({error:`Username Doesn't Exist...!`, statuscode:422})
+                res.json({error:`Username Doesn't Exist...!`, statuscode:401})
             }
             else {
                 bcrypt.compare(usrpass, Usr.usrpass, (err, chckpass) => {
@@ -43,7 +49,7 @@ module.exports = {
                         res.json({success:`User Logged In Successfully.`, statuscode:220, user:req.session.usracc})
                     }
                     else {
-                        res.json({error:`Wrong Password entered...!`, statuscode:423})
+                        res.json({error:`Wrong Password entered...!`, statuscode:422})
                     }
                 })
             }
